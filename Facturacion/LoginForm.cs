@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,7 @@ namespace Facturacion
             {
                 errorProvider1.SetError(UsuariotextBox, "Ingrese el Usuario");
                 UsuariotextBox.Focus();
+                return;
             }
             errorProvider1.SetError(UsuariotextBox, "");
 
@@ -40,13 +42,23 @@ namespace Facturacion
             }
             errorProvider1.SetError(ContraseñatextBox, "");
 
-            //LLAMAMOS AL FORMULARIO
-            PrincipalForm formulario = new PrincipalForm();
 
-            //OCULTA EL FORMULARIO DONDE NOS ENCONTRAMOS
-            this.Hide();
+            BaseDatosSoftwareHotel _BaseSoftwareHotel = new BaseDatosSoftwareHotel();
 
-            formulario.Show();
+            if (_BaseSoftwareHotel.ValidacionUsuarios(UsuariotextBox.Text, ContraseñatextBox.Text))
+            {
+                //LLAMAMOS AL FORMULARIO
+                PrincipalForm formulario = new PrincipalForm();
+
+                //OCULTA EL FORMULARIO DONDE NOS ENCONTRAMOS
+                this.Hide();
+                formulario.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o Contraseña Incorrecto");
+            }    
+           
         }
     }
 }
