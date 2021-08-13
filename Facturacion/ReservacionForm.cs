@@ -24,7 +24,7 @@ namespace Facturacion
         {
             BaseDatosSoftwareHotel BaseHotel = new BaseDatosSoftwareHotel();
 
-            CategoriacomboBox.DataSource = BaseHotel.CargaCategorias();
+            CategoriacomboBox.DataSource = BaseHotel.CargarCategorias();
 
             //MUESTRA AL USUARIO LA COLUMNA 
             CategoriacomboBox.DisplayMember = "DESCRIPCION";
@@ -95,7 +95,7 @@ namespace Facturacion
                 
                 //LLAMAMOS FUNCIONES CREADAS
                 ListarEstadias();
-                LimpiarContorles();
+                LimpiarControles();
                 DeshabilitarControles();
             }
             else if (OperacionEjecutada == "Modificar")
@@ -103,7 +103,7 @@ namespace Facturacion
                 bool modificar = BaseHotel.ModificacionEstadia(CodReservaciontextBox.Text, Convert.ToDateTime(FechaEntradaTextBox.Text), Convert.ToDateTime(FechaSalidaTextBox.Text), DescripciontextBox.Text, Convert.ToInt32(CategoriacomboBox.SelectedValue), Convert.ToDecimal(PreciotextBox.Text), Convert.ToInt32(HabitacionestextBox.Text));
 
                 ListarEstadias();
-                LimpiarContorles();
+                LimpiarControles();
                 DeshabilitarControles();
             }   
         }
@@ -122,7 +122,7 @@ namespace Facturacion
         {
             CodReservaciontextBox.Enabled = true;
             FechaEntradaTextBox.Enabled = true;
-            FechaEntradaTextBox.Enabled = true;
+            FechaSalidaTextBox.Enabled = true;
             DescripciontextBox.Enabled = true;
             CategoriacomboBox.Enabled = true;
             PreciotextBox.Enabled = true;
@@ -139,7 +139,7 @@ namespace Facturacion
         {
             CodReservaciontextBox.Enabled = false;
             FechaEntradaTextBox.Enabled = false;
-            FechaEntradaTextBox.Enabled = false;
+            FechaSalidaTextBox.Enabled = false;
             DescripciontextBox.Enabled = false;
             CategoriacomboBox.Enabled = false;
             PreciotextBox.Enabled = false;
@@ -152,11 +152,11 @@ namespace Facturacion
         }
 
         //FUNCION DE LIMPIEZA EN CONTROLES
-        private void LimpiarContorles()
+        private void LimpiarControles()
         {
             CodReservaciontextBox.Clear();
             FechaEntradaTextBox.Clear ();
-            FechaEntradaTextBox.Clear();
+            FechaSalidaTextBox.Clear();
             DescripciontextBox.Clear();
             PreciotextBox.Clear();
             HabitacionestextBox.Clear();
@@ -165,7 +165,7 @@ namespace Facturacion
         private void Cancelarbutton_Click(object sender, EventArgs e)
         {
             DeshabilitarControles();
-            LimpiarContorles();
+            LimpiarControles();
         }
 
         private void Modificarbutton_Click(object sender, EventArgs e)
@@ -188,7 +188,37 @@ namespace Facturacion
             {
                 MessageBox.Show("Selecione la fila a modificar");
             }
+        }
 
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            if (EstadiasDataGridView.SelectedRows.Count > 0)
+            {
+                BaseDatosSoftwareHotel BaseHotel = new BaseDatosSoftwareHotel();
+
+                bool eliminar = BaseHotel.EliminarEstadia(EstadiasDataGridView.CurrentRow.Cells[0].Value.ToString());
+
+                ListarEstadias();
+            }
+            else
+            {
+                MessageBox.Show("Selecione la fila a eliminar");
+            }
+        }
+
+        private void PreciotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //SOLO PERMITE NUMEROS Y PUNTO, PERMITE BORRAR LO INGRESADO
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            //PERMITIRÁ SOLO UN PUNTO
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -42,12 +42,12 @@ namespace Facturacion
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.HabitacionestoolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
-            this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
-            this.ClientestoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.FacturaciontoolStripTabItem = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx4 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTabItem3 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
+            this.toolStripEx3 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
+            this.ClientestoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.tabbedMDIManager1 = new Syncfusion.Windows.Forms.Tools.TabbedMDIManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).BeginInit();
             this.ribbonControlAdv1.SuspendLayout();
@@ -57,10 +57,10 @@ namespace Facturacion
             this.toolStripEx1.SuspendLayout();
             this.toolStripTabItem2.Panel.SuspendLayout();
             this.toolStripEx2.SuspendLayout();
-            this.toolStripTabItem3.Panel.SuspendLayout();
-            this.toolStripEx3.SuspendLayout();
             this.FacturaciontoolStripTabItem.Panel.SuspendLayout();
             this.toolStripEx4.SuspendLayout();
+            this.toolStripTabItem3.Panel.SuspendLayout();
+            this.toolStripEx3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbonControlAdv1
@@ -88,7 +88,7 @@ namespace Facturacion
             this.ribbonControlAdv1.QuickPanelVisible = false;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.FacturaciontoolStripTabItem;
+            this.ribbonControlAdv1.SelectedTab = this.toolStripTabItem1;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(701, 174);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";
@@ -196,7 +196,7 @@ namespace Facturacion
             this.UsuariostoolStripExp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.UsuariostoolStripExp.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UsuariostoolStripExp.Name = "UsuariostoolStripExp";
-            this.UsuariostoolStripExp.Size = new System.Drawing.Size(99, 91);
+            this.UsuariostoolStripExp.Size = new System.Drawing.Size(99, 105);
             this.UsuariostoolStripExp.Text = "Lista de Usuarios";
             this.UsuariostoolStripExp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.UsuariostoolStripExp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -249,53 +249,6 @@ namespace Facturacion
             this.HabitacionestoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.HabitacionestoolStripButton.Click += new System.EventHandler(this.HabitacionestoolStripButton_Click);
             // 
-            // toolStripTabItem3
-            // 
-            this.toolStripTabItem3.Name = "toolStripTabItem3";
-            // 
-            // 
-            // 
-            this.toolStripTabItem3.Panel.Controls.Add(this.toolStripEx3);
-            this.toolStripTabItem3.Panel.Name = "ribbonPanel3";
-            this.toolStripTabItem3.Panel.ScrollPosition = 0;
-            this.toolStripTabItem3.Panel.TabIndex = 4;
-            this.toolStripTabItem3.Panel.Text = "Clientes";
-            this.toolStripTabItem3.Position = -1;
-            this.toolStripTabItem3.Size = new System.Drawing.Size(64, 30);
-            this.toolStripTabItem3.Tag = "3";
-            this.toolStripTabItem3.Text = "Clientes";
-            // 
-            // toolStripEx3
-            // 
-            this.toolStripEx3.AutoSize = false;
-            this.toolStripEx3.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripEx3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.toolStripEx3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.toolStripEx3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStripEx3.Image = null;
-            this.toolStripEx3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ClientestoolStripButton});
-            this.toolStripEx3.Location = new System.Drawing.Point(0, 1);
-            this.toolStripEx3.Name = "toolStripEx3";
-            this.toolStripEx3.Office12Mode = false;
-            this.toolStripEx3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.toolStripEx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripEx3.Size = new System.Drawing.Size(39, 108);
-            this.toolStripEx3.TabIndex = 0;
-            // 
-            // ClientestoolStripButton
-            // 
-            this.ClientestoolStripButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClientestoolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ClientestoolStripButton.Image")));
-            this.ClientestoolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ClientestoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ClientestoolStripButton.Name = "ClientestoolStripButton";
-            this.ClientestoolStripButton.Size = new System.Drawing.Size(68, 105);
-            this.ClientestoolStripButton.Text = "Clientes";
-            this.ClientestoolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ClientestoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ClientestoolStripButton.Click += new System.EventHandler(this.ClientestoolStripButton_Click);
-            // 
             // FacturaciontoolStripTabItem
             // 
             this.FacturaciontoolStripTabItem.Name = "FacturaciontoolStripTabItem";
@@ -344,6 +297,53 @@ namespace Facturacion
             this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
+            // toolStripTabItem3
+            // 
+            this.toolStripTabItem3.Name = "toolStripTabItem3";
+            // 
+            // 
+            // 
+            this.toolStripTabItem3.Panel.Controls.Add(this.toolStripEx3);
+            this.toolStripTabItem3.Panel.Name = "ribbonPanel3";
+            this.toolStripTabItem3.Panel.ScrollPosition = 0;
+            this.toolStripTabItem3.Panel.TabIndex = 4;
+            this.toolStripTabItem3.Panel.Text = "Clientes";
+            this.toolStripTabItem3.Position = -1;
+            this.toolStripTabItem3.Size = new System.Drawing.Size(64, 30);
+            this.toolStripTabItem3.Tag = "3";
+            this.toolStripTabItem3.Text = "Clientes";
+            // 
+            // toolStripEx3
+            // 
+            this.toolStripEx3.AutoSize = false;
+            this.toolStripEx3.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripEx3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.toolStripEx3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.toolStripEx3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripEx3.Image = null;
+            this.toolStripEx3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ClientestoolStripButton});
+            this.toolStripEx3.Location = new System.Drawing.Point(0, 1);
+            this.toolStripEx3.Name = "toolStripEx3";
+            this.toolStripEx3.Office12Mode = false;
+            this.toolStripEx3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.toolStripEx3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.toolStripEx3.Size = new System.Drawing.Size(39, 108);
+            this.toolStripEx3.TabIndex = 0;
+            // 
+            // ClientestoolStripButton
+            // 
+            this.ClientestoolStripButton.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClientestoolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ClientestoolStripButton.Image")));
+            this.ClientestoolStripButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ClientestoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ClientestoolStripButton.Name = "ClientestoolStripButton";
+            this.ClientestoolStripButton.Size = new System.Drawing.Size(68, 81);
+            this.ClientestoolStripButton.Text = "Clientes";
+            this.ClientestoolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ClientestoolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ClientestoolStripButton.Click += new System.EventHandler(this.ClientestoolStripButton_Click);
+            // 
             // tabbedMDIManager1
             // 
             this.tabbedMDIManager1.AttachedTo = this;
@@ -368,8 +368,9 @@ namespace Facturacion
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.IsMdiContainer = true;
             this.Name = "PrincipalForm";
-            this.Text = "Facturación 1201";
+            this.Text = "Software Hotel";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrincipalForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlAdv1)).EndInit();
             this.ribbonControlAdv1.ResumeLayout(false);
             this.ribbonControlAdv1.PerformLayout();
@@ -381,12 +382,12 @@ namespace Facturacion
             this.toolStripTabItem2.Panel.ResumeLayout(false);
             this.toolStripEx2.ResumeLayout(false);
             this.toolStripEx2.PerformLayout();
-            this.toolStripTabItem3.Panel.ResumeLayout(false);
-            this.toolStripEx3.ResumeLayout(false);
-            this.toolStripEx3.PerformLayout();
             this.FacturaciontoolStripTabItem.Panel.ResumeLayout(false);
             this.toolStripEx4.ResumeLayout(false);
             this.toolStripEx4.PerformLayout();
+            this.toolStripTabItem3.Panel.ResumeLayout(false);
+            this.toolStripEx3.ResumeLayout(false);
+            this.toolStripEx3.PerformLayout();
             this.ResumeLayout(false);
 
         }

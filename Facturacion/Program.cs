@@ -15,7 +15,7 @@ namespace Facturacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReservacionForm());
+            Application.Run(new LoginForm());
         }
     }
 }

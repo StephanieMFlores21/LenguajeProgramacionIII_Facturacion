@@ -99,5 +99,14 @@ namespace Facturacion
         {
             frmReservacion = null;
         }
+
+        private void PrincipalForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Desea cerrar el sistema?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            Application.Exit();
+        }
     }
 }

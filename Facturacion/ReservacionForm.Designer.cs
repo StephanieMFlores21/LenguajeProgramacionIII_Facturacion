@@ -57,6 +57,8 @@ namespace Facturacion
             // 
             // EstadiasDataGridView
             // 
+            this.EstadiasDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.EstadiasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EstadiasDataGridView.Location = new System.Drawing.Point(3, 307);
             this.EstadiasDataGridView.Name = "EstadiasDataGridView";
@@ -76,13 +78,13 @@ namespace Facturacion
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Enabled = false;
             this.Eliminarbutton.Location = new System.Drawing.Point(562, 230);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(85, 37);
             this.Eliminarbutton.TabIndex = 29;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -140,6 +142,7 @@ namespace Facturacion
             this.PreciotextBox.Name = "PreciotextBox";
             this.PreciotextBox.Size = new System.Drawing.Size(172, 20);
             this.PreciotextBox.TabIndex = 23;
+            this.PreciotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciotextBox_KeyPress);
             // 
             // label4
             // 
